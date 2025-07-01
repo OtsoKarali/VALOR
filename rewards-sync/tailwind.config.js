@@ -4,9 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary:  "#FF6B6B",  // addictive watermelon
-        secondary:"#4ECDC4",  // mint
-        accent:   "#FFE66D",  // yellow pop
+        background: "#101828", // dark navy
+        primary: "#b28cff",   // purple
+        white: "#FFFFFF",
+        gray: "#A3A3A3"
       },
       borderRadius: { xl: "32px" },
     },
