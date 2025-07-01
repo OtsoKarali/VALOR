@@ -1,0 +1,14 @@
+<svg width="320" height="200" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chaseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a4b8c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d2b5e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="320" height="200" rx="12" fill="url(#chaseGradient)"/>
+  <circle cx="50" cy="50" r="20" fill="#ff6b35"/>
+  <circle cx="80" cy="50" r="20" fill="#f7931e"/>
+  <text x="50" y="120" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">CHASE</text>
+  <text x="50" y="140" font-family="Arial, sans-serif" font-size="14" fill="white">SAPPHIRE PREFERRED</text>
+  <text x="50" y="170" font-family="monospace" font-size="12" fill="white">**** **** **** 1234</text>
+</svg> 

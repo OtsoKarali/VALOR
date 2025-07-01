@@ -1,31 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
-export default function Welcome() {
-  const spinAnim = useRef(0);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    let frame: number;
-    let angle = 0;
-    function animate() {
-      angle = (angle + 0.45) % 360;
-      if (imgRef.current) {
-        imgRef.current.style.transform = `rotate(${angle}deg)`;
-      }
-      frame = requestAnimationFrame(animate);
-    }
-    animate();
-    return () => cancelAnimationFrame(frame);
-  }, []);
-
+export default function Welcome({ onNext }: { onNext?: () => void }) {
   return (
     <div style={{ minHeight: '100vh', background: '#101828', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: 24 }}>
-      <img
-        ref={imgRef}
-        src="/assets/hero.png"
-        alt="Hero"
-        style={{ width: 260, height: 260, marginBottom: 32, transition: 'transform 0.1s linear' }}
-      />
       <h1 style={{ color: '#fff', fontSize: 28, fontWeight: 700, marginBottom: 12, textAlign: 'center' }}>
         Welcome to Rewards Sync
       </h1>
@@ -48,7 +25,7 @@ export default function Welcome() {
           boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
           cursor: 'pointer',
         }}
-        onClick={() => alert('Plaid flow would start here!')}
+        onClick={onNext}
       >
         Connect your card
       </button>
